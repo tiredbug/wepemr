@@ -76,7 +76,7 @@ if(!class_exists('Wpemr'))
 
 		function wpemr_scripts() 
 		{
-			if ( 'patient' === get_current_screen()->id ) 
+			if ( 'wpemr_patient' === get_current_screen()->id ) 
 			{
 
 				wp_enqueue_style( 'jquery-ui-style', plugins_url( 'assets/css/jquery-ui.min.css', __FILE__ ));
@@ -98,7 +98,7 @@ if(!class_exists('Wpemr'))
 		{
 			global $post, $wp_meta_boxes;
 			do_meta_boxes(get_current_screen(), 'advanced', $post);
-			unset($wp_meta_boxes['patient']['advanced']);
+			unset($wp_meta_boxes['wpemr_patient']['advanced']);
 		}
 
 
