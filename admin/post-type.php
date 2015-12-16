@@ -1,10 +1,10 @@
 <?php
-if(!class_exists('Dentix_Patient'))
+if(!class_exists('Wpemr_Patient'))
 {
 	/**
-	 * A PostTypeTemplate class that provides 3 additional meta fields
+	 * A PostType class that provides additional meta fields
 	 */
-	class Dentix_Patient
+	class Wpemr_Patient
 	{
 		const POST_TYPE	= "patient";
 		private $_meta	= array(
@@ -99,7 +99,7 @@ if(!class_exists('Dentix_Patient'))
     	{
     		// Add this metabox to every selected post
     		add_meta_box( 
-    			sprintf('dentix-metabox'),
+    			sprintf('wpemr-metabox'),
     			sprintf('%s Information', ucwords(str_replace("_", " ", self::POST_TYPE))),
     			array(&$this, 'add_inner_meta_boxes'),
     			self::POST_TYPE, 'advanced', 'high'
@@ -115,5 +115,5 @@ if(!class_exists('Dentix_Patient'))
 			include(sprintf("%s/../views/metabox.php", dirname(__FILE__)));			
 		} // END public function add_inner_meta_boxes($post)
 
-	} // END class Dentix_Patient
-} // END if(!class_exists('Dentix_Patient'))
+	} // END class Wpemr_Patient
+} // END if(!class_exists('Wpemr_Patient'))
