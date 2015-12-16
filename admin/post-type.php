@@ -6,7 +6,7 @@ if(!class_exists('Wpemr_Patient'))
 	 */
 	class Wpemr_Patient
 	{
-		const POST_TYPE	= "patient";
+		const POST_TYPE	= "wpemr_patient";
 		private $_meta	= array(
 			'full_name',
 			'sex',
