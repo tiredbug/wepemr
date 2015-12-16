@@ -1,6 +1,6 @@
 <table class="form-table">
 	<tr>
-		<th><label for="full_name"><?php _e("Name", "wpemr"); ?></label></th>
+		<th><label for="full_name"><?php _e("Full Name", "wpemr"); ?></label></th>
 		<td><input type="text" name="full_name" id="full_name" value="<?php echo @get_post_meta($post->ID, 'full_name', true); ?>" class="regular-text"></td>
 	</tr>
 	<tr>
