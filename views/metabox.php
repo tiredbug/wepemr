@@ -14,7 +14,7 @@
 	</tr>
 	<tr>
 		<th><label for="birthdate"><?php _e("Birthdate", "wpemr"); ?></label></th>
-		<td><input type="text" name="birthdate" class="birthdate" value="<?php echo @get_post_meta($post->ID, 'birthdate', true); ?>" class="regular-text"> (format: <i>yy-mm-dd</i>)</td>
+		<td><input type="text" name="birthdate" class="birthdate" id="birthdate" value="<?php echo @get_post_meta($post->ID, 'birthdate', true); ?>" class="regular-text"> (format: <i>yy-mm-dd</i>)</td>
 	</tr>
 	<tr>
 		<th><label for="address"><?php _e("Address", "wpemr"); ?></label></th>
