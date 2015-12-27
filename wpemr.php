@@ -3,7 +3,7 @@
 Plugin Name: WP EMR
 Plugin URI: http://basoro.org/wpemr 
 Description: A simple wordpress plugin for electronic medical records 
-Version: 1.0
+Version: 1.1
 Author: Faisol Basoro 
 Author URI: http://basoro.org 
 License: GPL2
@@ -42,16 +42,11 @@ if(!class_exists('Wpemr'))
 			$Wpemr_Updater->set_repository( 'wpemr' );
 			$Wpemr_Updater->initialize();
 
-			// Initialize Settings
-			require_once(sprintf("%s/settings.php", dirname(__FILE__)));
-			$Wpemr_Settings = new Wpemr_Settings();
-
 			// Register custom post types
 			require_once(sprintf("%s/admin/post-type.php", dirname(__FILE__)));
 			$Wpemr_Patient = new Wpemr_Patient();
 
 			$plugin = plugin_basename(__FILE__);
-			add_filter("plugin_action_links_$plugin", array( $this, 'plugin_settings_link' ));
 			add_action('admin_print_scripts', array( $this, 'wpemr_scripts' ));
 			add_action('edit_form_after_title', array( $this, 'wpemr_move_metabox' ));
 
@@ -73,13 +68,7 @@ if(!class_exists('Wpemr'))
 			// Do nothing
 		} // END public static function deactivate
 
-		// Add the settings link to the plugins page
-		function plugin_settings_link($links)
-		{
-			$settings_link = '<a href="options-general.php?page=wpemr_settings">Settings</a>';
-			array_unshift($links, $settings_link);
-			return $links;
-		}
+		// Add style and scripts
 
 		function wpemr_scripts() 
 		{

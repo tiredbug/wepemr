@@ -133,7 +133,7 @@ if(!class_exists('Wpemr_Patient'))
 		public function add_inner_meta_boxes($post)
 		{		
 			// Render the job order metabox
-			include(sprintf("%s/../views/metabox.php", dirname(__FILE__)));			
+			include(sprintf("%s/views/metabox.php", dirname(__FILE__)));			
 		} // END public function add_inner_meta_boxes($post)
 
 	} // END class Wpemr_Patient
