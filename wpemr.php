@@ -88,7 +88,6 @@ if(!class_exists('Wpemr'))
 				wp_enqueue_script( 'jquery-ui-core' );
 				wp_enqueue_script( 'jquery-ui-datepicker' );
 
-				wp_enqueue_script( 'jquery-colorpicker-js', plugins_url( 'assets/js/jquery.colorPicker.js', __FILE__ ), array('jquery'), time(), false );
 				wp_enqueue_script( 'wpemr-js', plugins_url( 'assets/js/wpemr.js', __FILE__ ), array('jquery'), time(), false );
 
 			}
