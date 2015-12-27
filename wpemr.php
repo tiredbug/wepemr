@@ -37,7 +37,7 @@ if(!class_exists('Wpemr'))
 		{
 			// Initialize Settings
 			require_once(sprintf("%s/updater.php", dirname(__FILE__)));
-			$Wpemr_Updater = new Wpemr_Updater();
+			$Wpemr_Updater = new Wpemr_Updater(__FILE__);
 			$Wpemr_Updater->set_username( 'basoro' );
 			$Wpemr_Updater->set_repository( 'wpemr' );
 			$Wpemr_Updater->initialize();
