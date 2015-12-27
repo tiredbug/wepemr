@@ -97,8 +97,11 @@ if(!class_exists('Wpemr'))
 		function wpemr_move_metabox() 
 		{
 			global $post, $wp_meta_boxes;
-			do_meta_boxes(get_current_screen(), 'advanced', $post);
-			unset($wp_meta_boxes['wpemr_patient']['advanced']);
+			if ( 'wpemr_patient' === get_current_screen()->id ) 
+			{
+			    do_meta_boxes(get_current_screen(), 'advanced', $post);
+			    unset($wp_meta_boxes['wpemr_patient']['advanced']);
+			}
 		}
 
 
