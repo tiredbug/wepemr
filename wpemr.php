@@ -3,7 +3,7 @@
 Plugin Name: WP EMR
 Plugin URI: http://basoro.org/wpemr 
 Description: A simple wordpress plugin for electronic medical records 
-Version: 1.0
+Version: 1.1
 Author: Faisol Basoro 
 Author URI: http://basoro.org 
 License: GPL2
